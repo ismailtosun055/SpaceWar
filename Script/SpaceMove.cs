@@ -7,6 +7,7 @@ public class SpaceMove : MonoBehaviour
     public Transform uzay;
     public Animator anim;
     public float uzayhizi;
+    public float f22can;
     void Start()
     {
         

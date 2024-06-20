@@ -6,9 +6,11 @@ public class FuzeMove : MonoBehaviour
 {
     public Rigidbody2D fuze;
     public float fuzehizi;
+    public float uzaycan;
     void Start()
     {
-        
+        SpaceMove candegeri = FindObjectOfType<SpaceMove>();
+        uzaycan = candegeri.f22can;
     }
 
     void Update()
@@ -19,5 +21,7 @@ public class FuzeMove : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision2D){
         Destroy(gameObject);
+        uzaycan -= 10;
+        Debug.Log(uzaycan);
     }
 }
